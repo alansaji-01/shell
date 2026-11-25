@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# QUESTION:
+# Write a shell script to accept a filename from the user and check
+# whether the file exists. If it exists, check and display whether
+# it is an ordinary file or a directory, whether it is readable,
+# writable and executable, and whether it is empty or non-empty.
+# If the file does not exist, display an appropriate error message.
+
 echo "Enter filename:"
 read file
 
