@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# QUESTION:
+# Write a shell script to accept the name of a directory (subdirectory)
+# from the user. Check whether the directory exists. If it exists,
+# display its contents, list all entries whose names start with "ab",
+# and display the count of those entries. Otherwise, display an
+# appropriate error message.
+
 echo "Enter directory name:"
 read dir
 
