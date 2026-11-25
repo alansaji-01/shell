@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# QUESTION:
+# Write a shell script to accept a filename from the user.
+# Check whether the file exists. If it exists, display the number
+# of lines, words and characters in the file. Also display the
+# first five lines and the last five lines of the file.
+# If the file does not exist, display an appropriate error message.
+
 echo "Enter filename:"
 read file
 
