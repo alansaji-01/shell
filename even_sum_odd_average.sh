@@ -1,30 +1,38 @@
 #!/bin/bash
 
 echo "Enter a number:"
-read n
+read number
+
+# Accept only whole numbers, including negative numbers.
+if [[ ! "$number" =~ ^-?[0-9]+$ ]]; then
+    echo "Error: Please enter a valid integer."
+    exit 1
+fi
+
+# Remove the minus sign; digits are the same for negative numbers.
+number=${number#-}
 
 even=0
 odd_sum=0
-count=0
+odd_count=0
 
-while [ "$n" -gt 0 ]
+# Process each digit as text, so 0 and numbers with leading zeros work.
+for ((i=0; i<${#number}; i++))
 do
-    digit=$((n % 10))
+    digit=${number:i:1}
 
-    if [ $((digit % 2)) -eq 0 ]; then
+    if (( digit % 2 == 0 )); then
         even=$((even + digit))
     else
         odd_sum=$((odd_sum + digit))
-        count=$((count + 1))
+        odd_count=$((odd_count + 1))
     fi
-
-    n=$((n / 10))
 done
 
 echo "Sum of even digits = $even"
 
-if [ "$count" -gt 0 ]; then
-    average=$((odd_sum / count))
+if [ "$odd_count" -gt 0 ]; then
+    average=$(awk -v sum="$odd_sum" -v count="$odd_count" 'BEGIN { printf "%.2f", sum/count }')
     echo "Average of odd digits = $average"
 else
     echo "No odd digits found"
