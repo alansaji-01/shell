@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# QUESTION:
+# Write a menu-driven shell script to perform file operations.
+# The menu should provide the following choices:
+# 1. Copy a file.
+# 2. Edit a file.
+# 3. Rename a file.
+# 4. Delete a file.
+# Accept the user's choice and the required filenames, then
+# perform the selected operation. Display an error for an invalid choice.
+
 echo "1. Copy"
 echo "2. Edit"
 echo "3. Rename"
