@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# QUESTION:
+# Write a shell script to create a file named "student" and store
+# each student's number, name and mark in it. Accept the details
+# for n students from the user. Display all student records and
+# the total number of students. Sort and display the records
+# according to marks, and display the student(s) who obtained
+# the highest mark.
+
 echo "Enter number of students:"
 read n
 
