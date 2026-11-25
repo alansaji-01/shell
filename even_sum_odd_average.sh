@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# QUESTION:
+# Write a shell script to accept an integer from the user.
+# Find and display the sum of all even digits in the given number
+# and the average of all odd digits in the given number.
+
 echo "Enter a number:"
 read number
 
